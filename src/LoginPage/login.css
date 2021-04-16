@@ -8,6 +8,8 @@
     .avatar {
       margin: 8px;
       background-Color: pink;
+      align-items: 'center';
+      justify-content: 'center';
     }
     .form {
       width: '100%'; 

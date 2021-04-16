@@ -18,7 +18,7 @@ function login(email, password) {
         body: JSON.stringify({ email, password })
     };
 
-    return fetch(`https://yents-backend.herokuapp.com/users/authenticate`, requestOptions)
+    return fetch(`https://yents-backend.herokuapp.com/login`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -58,7 +58,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`https://yents-backend.herokuapp.com/users/register`, requestOptions).then(handleResponse);
+    return fetch(`https://yents-backend.herokuapp.com/signup`, requestOptions).then(handleResponse);
 }
 
 function update(user) {
@@ -68,7 +68,7 @@ function update(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`https://yents-backend.herokuapp.com/users/${user.id}`, requestOptions).then(handleResponse);;
+    return fetch(`https://yents-backend.herokuapp.com/users/phoneNumber/${user.id}`, requestOptions).then(handleResponse);;
 }
 
 // prefixed function name with underscore because delete is a reserved word in javascript

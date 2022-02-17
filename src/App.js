@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-undef */
 
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
@@ -12,13 +11,13 @@ import Registration from './RegisterPage/register';
 import Home from './Homepage/Home';
 import Forgot from './ForgotPassword/ForgotPassword';
 import NewPassword from './ForgotPassword/NewPassword';
-import { Alert,AlertTitle } from '@material-ui/lab';
+//import { Alert,AlertTitle } from '@material-ui/lab';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
-    history.listen((location, action) => {
+    history.listen((location, _action) => {
         // clear alert on location change
         this.props.clearAlerts();
     });
